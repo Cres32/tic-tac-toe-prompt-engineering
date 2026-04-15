@@ -6,7 +6,39 @@
     <title>TIC-TAC-TOE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="init()">
+    <header>
+        <h1>TIC TAC TOE</h1>
+    </header>
+
+    <main>
+        <section class="setup-container" id="setup-container"> 
+            <input type="text" id="player1-name" placeholder="Name Player 1 (X)"> 
+            <input type="text" id="player2-name" placeholder="Name Player 2 (O)"> 
+            <button class="restart-btn" onclick="startGame()">Start Game</button> 
+        </section>
+
+        <section id="scoreboard" class="scoreboard" style="display: none;"> 
+            <div class="score-box"> 
+                <span id="name-x">Player X</span>: <span id="score-x">0</span> 
+            </div> 
+            <div class="score-box"> 
+                <span id="name-o">Player O</span>: <span id="score-o">0</span> 
+            </div> 
+        </section>
+
+        <div id="player-status" class="status-message"></div>
+        
+        <section id="game-area">
+            <div id="content"></div>
+        </section>
+
+        <section class="center mt-32">
+            <button class="restart-btn" onclick="restartGame()">Spiel neu starten</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
