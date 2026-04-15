@@ -300,6 +300,11 @@ h1,
 @media(max-width: 450px) {
     h1 {
         font-size: 1.5rem;
+        margin-top: 2.5rem;
+    }
+
+    #content{
+        margin-top: 0rem;
     }
 
     td {
